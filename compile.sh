@@ -1,0 +1,1 @@
+g++ src/*.cpp *.cpp -o run && echo done;

@@ -1,0 +1,90 @@
+FILE: test/traces/gcc.trace
+
+	DirectMapped: 
+		Hits: 484211
+		Misses: 31472
+		Hit %: 93.897
+		Miss %: 6.10297
+		Hit/Miss: 15.3855
+
+	SetAssociative: 
+		Hits: 484331
+		Misses: 31352
+		Hit %: 93.9203
+		Miss %: 6.0797
+		Hit/Miss: 15.4482
+
+	Total: 515683
+
+FILE: test/traces/gzip.trace
+
+	DirectMapped: 
+		Hits: 401015
+		Misses: 80029
+		Hit %: 83.3635
+		Miss %: 16.6365
+		Hit/Miss: 5.01087
+
+	SetAssociative: 
+		Hits: 401082
+		Misses: 79962
+		Hit %: 83.3774
+		Miss %: 16.6226
+		Hit/Miss: 5.01591
+
+	Total: 481044
+
+FILE: test/traces/mcf.trace
+
+	DirectMapped: 
+		Hits: 373895
+		Misses: 353335
+		Hit %: 51.4136
+		Miss %: 48.5864
+		Hit/Miss: 1.05819
+
+	SetAssociative: 
+		Hits: 380192
+		Misses: 347038
+		Hit %: 52.2795
+		Miss %: 47.7205
+		Hit/Miss: 1.09553
+
+	Total: 727230
+
+FILE: test/traces/swim.trace
+
+	DirectMapped: 
+		Hits: 280765
+		Misses: 22428
+		Hit %: 92.6027
+		Miss %: 7.39727
+		Hit/Miss: 12.5185
+
+	SetAssociative: 
+		Hits: 280893
+		Misses: 22300
+		Hit %: 92.645
+		Miss %: 7.35505
+		Hit/Miss: 12.5961
+
+	Total: 303193
+
+FILE: test/traces/twolf.trace
+
+	DirectMapped: 
+		Hits: 477355
+		Misses: 5469
+		Hit %: 98.8673
+		Miss %: 1.13271
+		Hit/Miss: 87.2839
+
+	SetAssociative: 
+		Hits: 477464
+		Misses: 5360
+		Hit %: 98.8899
+		Miss %: 1.11014
+		Hit/Miss: 89.079
+
+	Total: 482824
+
