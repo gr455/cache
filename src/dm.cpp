@@ -22,6 +22,7 @@ bool DirectMapped::assert_cache_hit(std::string addr){
 void DirectMapped::write_to_cache(std::string addr){
 	unsigned int index = this->Cache::address_index(addr);
 	this->mem[index] = "1" + this->Cache::address_tag(addr);
+	// std::cout << this->Cache::address_tag(addr) << std:: endl;
 }
 
 bool DirectMapped::load(std::string addr){
@@ -37,4 +38,3 @@ bool DirectMapped::store(std::string addr){
 	if(!hit) this->DirectMapped::write_to_cache(addr);
 	return hit;
 }
-

@@ -25,19 +25,23 @@ inline size_t Cache::tag_bit_count(){
 std::string Cache::cache_tag(std::string addr){
 	size_t bits = this->index_bit_count();
 	size_t offset_bits = this->offset_bit_count();
-	return addr.substr(1, ADDR_SIZE - 1);
+	return addr.substr(1, this->tag_bit_count());
 }
 
 unsigned int Cache::address_index(std::string addr){
 	size_t bits = this->index_bit_count();
 	size_t offset_bits = this->offset_bit_count();
-	return bintoi(addr.substr(ADDR_SIZE - bits - offset_bits, ADDR_SIZE - 1 - offset_bits), bits);
+	std::string t = addr.substr(ADDR_SIZE - bits - offset_bits , this->index_bit_count());
+	// std::cout << t << std::endl;
+	return bintoi(t, bits);
 }
+
+// 00011111111111 1111111111010100 00
 
 std::string Cache::address_tag(std::string addr){
 	size_t bits = this->index_bit_count();
 	size_t offset_bits = this->offset_bit_count();
-	return addr.substr(0, ADDR_SIZE - bits - offset_bits - 1);
+	return addr.substr(0, this->tag_bit_count());
 }
 
 unsigned int Cache::address_bit_offset(std::string addr){

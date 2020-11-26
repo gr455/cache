@@ -10,12 +10,12 @@ using namespace std;
 int main(){
 
 	/* Declaring cache space for both caches */
-	string mem_dm[65536] = {"000000000000000000000000000000000"};
+	string mem_dm[65536] = {"000000000000000"};
 	string ** mem_sa = new string *[65536];
 	for(int i = 0; i < 65536; i++){
 		mem_sa[i] = new string[4];
 		for(int j = 0; j < 4; j++){
-			mem_sa[i][j] = "000000000000000000000000000000000";
+			mem_sa[i][j] = "000000000000000";
 		}
 	}
 
@@ -25,7 +25,7 @@ int main(){
 	}
 
 	/* Test input trace files */
-	string files[] = {"test/traces/gcc.trace","test/traces/gzip.trace","test/traces/mcf.trace","test/traces/swim.trace", "test/traces/twolf.trace"};
+	string files[] = {"test/traces/gcc.trace","test/traces/gzip.trace","test/traces/mcf.trace","test/traces/swim.trace","test/traces/twolf.trace"};
 
 	/* Input and processing */
 	char action;
